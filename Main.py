@@ -18,6 +18,7 @@ base = base.loc[:,["Time", "V1", "V2", "V3", "V4", "V5", "V6",
 X_train, X_test, y_train, y_test  = train_test_split(base, y, test_size=0.2, random_state=12345)
 
 vizinhanca = KNeighborsClassifier(n_neighbors=3)
+#vizinhanca = KNeighborsClassifier(n_neighbors=3,metric='manhattan')
 vizinhanca.fit(X_train,y_train)
 
 print(vizinhanca.predict(X_test))
