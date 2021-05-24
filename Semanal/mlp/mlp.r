@@ -59,7 +59,7 @@ mlp.forward <- function(model,entrada){
 
 }
 
-mlp.backpropagation <- function(model,dataset,eta=0.1,threshold=1e-3){
+mlp.backpropagation <- function(model,dataset,eta=0.1,threshold=1e-1){
 
 	squaredError = 2*threshold
 	counter = 0
@@ -76,7 +76,7 @@ mlp.backpropagation <- function(model,dataset,eta=0.1,threshold=1e-3){
 			error = Yp - Op
 			squaredError = squaredError + sum(error^2)
 
-			delta_output_p = error * model$df_dnet(results$f_net_output_p)
+			delta_output_p = as.vector(error * model$df_dnet(results$f_net_output_p))
 
 			w_output_kj = model$output[,1:model$hidden.lenght]
 			delta_hidden_p = as.numeric(model$df_dnet(results$f_net_hidden_p))*
