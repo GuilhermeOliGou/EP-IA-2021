@@ -1,0 +1,5 @@
+"Temperatura","Dor de cabeca","Dor nos olhos","Nauseas","Cansaco","Diagnostico"
+"39","SIM","SIM","NAO","SIM","DENGUE"
+"35","NAO","NAO","SIM","NAO","DENGUE"
+"35","NAO","NAO","NAO","SIM","OUTRA"
+"38","SIM","SIM","NAO","SIM","OUTRA"
