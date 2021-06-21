@@ -14,7 +14,8 @@ naive.bayes <- function(dataset,query,min.prob = 1e-7) {
   for(i in 1:nrow(query)){
     aux = as.matrix(query[i,1:ncol(query)-1])
     resp = naive.activation(dataset = dataset,query = aux,min.prob = min.prob)
-    resultado = rbind(resultado, resp$probabilidades)
+    print(resp$probabilidades)
+    #resultado = rbind(resultado, resp$probabilidades)
   }
   
 }
